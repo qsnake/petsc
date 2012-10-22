@@ -15,7 +15,8 @@ set -e
     --with-debugging=0 \
     --with-c2html=0 \
     --with-cc=mpicc \
-    --with-fc=mpif90
+    --with-fc=mpif90 \
+    --with-scalar-type=complex
 
 make
 make install
