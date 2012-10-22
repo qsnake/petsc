@@ -1,0 +1,21 @@
+#! /bin/sh
+
+if [ "$SPKG_LOCAL" = "" ]; then
+   echo "SPKG_LOCAL undefined ... exiting";
+   echo "Maybe run 'qsnake --shell'?"
+   exit 1
+fi
+
+set -e
+
+./configure \
+    --prefix="$SPKG_LOCAL" \
+    --with-blas-lapack-dir="$SPKG_LOCAL/lib" \
+    --with-shared-libraries=1 \
+    --with-debugging=0 \
+    --with-c2html=0 \
+    --with-cc=mpicc \
+    --with-fc=mpif90
+
+make
+make install
