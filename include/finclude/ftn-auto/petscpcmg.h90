@@ -1,0 +1,123 @@
+        subroutine PCMGGetLevels(pc, levels ,ierr)
+       PC pc ! PC
+       PetscInt levels ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine PCMGSetType(pc, form ,ierr)
+       PC pc ! PC
+       PCMGType form ! PCMGType
+       integer ierr
+       end subroutine
+        subroutine PCMGSetCycleType(pc, n ,ierr)
+       PC pc ! PC
+       PCMGCycleType n ! PCMGCycleType
+       integer ierr
+       end subroutine
+        subroutine PCMGMultiplicativeSetCycles(pc, n ,ierr)
+       PC pc ! PC
+       PetscInt n ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine PCMGSetGalerkin(pc, use ,ierr)
+       PC pc ! PC
+       PetscBool use ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PCMGGetGalerkin(pc, galerkin ,ierr)
+       PC pc ! PC
+       PetscBool galerkin ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PCMGSetNumberSmoothDown(pc, n ,ierr)
+       PC pc ! PC
+       PetscInt n ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine PCMGSetNumberSmoothUp(pc, n ,ierr)
+       PC pc ! PC
+       PetscInt n ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine PCMGGetCoarseSolve(pc, ksp ,ierr)
+       PC pc ! PC
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine PCMGSetInterpolation(pc, l, mat ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine PCMGGetInterpolation(pc, l, mat ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine PCMGSetRestriction(pc, l, mat ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine PCMGGetRestriction(pc, l, mat ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine PCMGSetRScale(pc, l, rscale ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       Vec rscale ! Vec
+       integer ierr
+       end subroutine
+        subroutine PCMGGetRScale(pc, l, rscale ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       Vec rscale ! Vec
+       integer ierr
+       end subroutine
+        subroutine PCMGGetSmoother(pc, l, ksp ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine PCMGGetSmootherUp(pc, l, ksp ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine PCMGGetSmootherDown(pc, l, ksp ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine PCMGSetCyclesOnLevel(pc, l, c ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       PetscInt c ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine PCMGSetRhs(pc, l, c ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       Vec c ! Vec
+       integer ierr
+       end subroutine
+        subroutine PCMGSetX(pc, l, c ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       Vec c ! Vec
+       integer ierr
+       end subroutine
+        subroutine PCMGSetR(pc, l, c ,ierr)
+       PC pc ! PC
+       PetscInt l ! PetscInt
+       Vec c ! Vec
+       integer ierr
+       end subroutine

@@ -1,0 +1,720 @@
+        subroutine VecScatterInitializeForGPU(inctx, x, mode ,ierr)
+       VecScatter inctx ! VecScatter
+       Vec x ! Vec
+       ScatterMode mode ! ScatterMode
+       integer ierr
+       end subroutine
+        subroutine VecScatterFinalizeForGPU(inctx ,ierr)
+       VecScatter inctx ! VecScatter
+       integer ierr
+       end subroutine
+        subroutine VecCreateSeq(comm, n, v ,ierr)
+       integer comm ! MPI_Comm
+       PetscInt n ! PetscInt
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecCreateMPIPThread(comm, n, nupper, nthreads,       &
+     &affinities, v ,ierr)
+       integer comm ! MPI_Comm
+       PetscInt n ! PetscInt
+       PetscInt nupper ! PetscInt
+       PetscInt nthreads ! PetscInt
+       PetscInt affinities (*) ! PetscInt
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecCreateShared(comm, n, nupper, v ,ierr)
+       integer comm ! MPI_Comm
+       PetscInt n ! PetscInt
+       PetscInt nupper ! PetscInt
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecStashGetInfo(vec, nstash, reallocs, bnstash,      &
+     &breallocs ,ierr)
+       Vec vec ! Vec
+       PetscInt nstash ! PetscInt
+       PetscInt reallocs ! PetscInt
+       PetscInt bnstash ! PetscInt
+       PetscInt breallocs ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecSetLocalToGlobalMapping(x, mapping ,ierr)
+       Vec x ! Vec
+       ISLocalToGlobalMapping mapping ! ISLocalToGlobalMapping
+       integer ierr
+       end subroutine
+        subroutine VecSetLocalToGlobalMappingBlock(x, mapping ,ierr)
+       Vec x ! Vec
+       ISLocalToGlobalMapping mapping ! ISLocalToGlobalMapping
+       integer ierr
+       end subroutine
+        subroutine VecGetLocalToGlobalMapping(X, mapping ,ierr)
+       Vec X ! Vec
+       ISLocalToGlobalMapping mapping ! ISLocalToGlobalMapping
+       integer ierr
+       end subroutine
+        subroutine VecGetLocalToGlobalMappingBlock(X, mapping ,ierr)
+       Vec X ! Vec
+       ISLocalToGlobalMapping mapping ! ISLocalToGlobalMapping
+       integer ierr
+       end subroutine
+        subroutine VecAssemblyBegin(vec ,ierr)
+       Vec vec ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecAssemblyEnd(vec ,ierr)
+       Vec vec ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecPointwiseMax(w, x, y ,ierr)
+       Vec w ! Vec
+       Vec x ! Vec
+       Vec y ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecPointwiseMin(w, x, y ,ierr)
+       Vec w ! Vec
+       Vec x ! Vec
+       Vec y ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecPointwiseMaxAbs(w, x, y ,ierr)
+       Vec w ! Vec
+       Vec x ! Vec
+       Vec y ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecPointwiseDivide(w, x, y ,ierr)
+       Vec w ! Vec
+       Vec x ! Vec
+       Vec y ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecDuplicate(v, newv ,ierr)
+       Vec v ! Vec
+       Vec newv ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecDestroy(v ,ierr)
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecViewFromOptions(vec, title ,ierr)
+       Vec vec ! Vec
+       character title ! char
+       integer ierr
+       end subroutine
+        subroutine VecGetSize(x, size ,ierr)
+       Vec x ! Vec
+       PetscInt size ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecGetLocalSize(x, size ,ierr)
+       Vec x ! Vec
+       PetscInt size ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecSetOption(x, op, flag ,ierr)
+       Vec x ! Vec
+       VecOption op ! VecOption
+       PetscBool flag ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine VecResetArray(vec ,ierr)
+       Vec vec ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecReciprocal(vec ,ierr)
+       Vec vec ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecStashSetInitialSize(vec, size, bsize ,ierr)
+       Vec vec ! Vec
+       PetscInt size ! PetscInt
+       PetscInt bsize ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecConjugate(x ,ierr)
+       Vec x ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecPointwiseMult(w, x, y ,ierr)
+       Vec w ! Vec
+       Vec x ! Vec
+       Vec y ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecSetRandom(x, rctx ,ierr)
+       Vec x ! Vec
+       PetscRandom rctx ! PetscRandom
+       integer ierr
+       end subroutine
+        subroutine VecZeroEntries(vec ,ierr)
+       Vec vec ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecSetFromOptions(vec ,ierr)
+       Vec vec ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecSetSizes(v, n, nupper ,ierr)
+       Vec v ! Vec
+       PetscInt n ! PetscInt
+       PetscInt nupper ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecSetBlockSize(v, bs ,ierr)
+       Vec v ! Vec
+       PetscInt bs ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecGetBlockSize(v, bs ,ierr)
+       Vec v ! Vec
+       PetscInt bs ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecSetUp(v ,ierr)
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecCopy(x, y ,ierr)
+       Vec x ! Vec
+       Vec y ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecSwap(x, y ,ierr)
+       Vec x ! Vec
+       Vec y ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecStashView(v, viewer ,ierr)
+       Vec v ! Vec
+       PetscViewer viewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine VecCreate(comm, vec ,ierr)
+       integer comm ! MPI_Comm
+       Vec vec ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecMaxPointwiseDivide(x, y, max ,ierr)
+       Vec x ! Vec
+       Vec y ! Vec
+       PetscReal max ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecDot(x, y, val ,ierr)
+       Vec x ! Vec
+       Vec y ! Vec
+       PetscScalar val ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecNorm(x, type, val ,ierr)
+       Vec x ! Vec
+       NormType type ! NormType
+       PetscReal val ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecNormAvailable(x, type, available, val ,ierr)
+       Vec x ! Vec
+       NormType type ! NormType
+       PetscBool available ! PetscBool
+       PetscReal val ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecNormalize(x, val ,ierr)
+       Vec x ! Vec
+       PetscReal val ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecMin(x, p, val ,ierr)
+       Vec x ! Vec
+       PetscInt p ! PetscInt
+       PetscReal val ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecTDot(x, y, val ,ierr)
+       Vec x ! Vec
+       Vec y ! Vec
+       PetscScalar val ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecScale(x, alpha ,ierr)
+       Vec x ! Vec
+       PetscScalar alpha ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecSet(x, alpha ,ierr)
+       Vec x ! Vec
+       PetscScalar alpha ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecAXPY(y, alpha, x ,ierr)
+       Vec y ! Vec
+       PetscScalar alpha ! PetscScalar
+       Vec x ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecAXPBY(y, alpha, beta, x ,ierr)
+       Vec y ! Vec
+       PetscScalar alpha ! PetscScalar
+       PetscScalar beta ! PetscScalar
+       Vec x ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecAXPBYPCZ(z, alpha, beta, gamma, x, y ,ierr)
+       Vec z ! Vec
+       PetscScalar alpha ! PetscScalar
+       PetscScalar beta ! PetscScalar
+       PetscScalar gamma ! PetscScalar
+       Vec x ! Vec
+       Vec y ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecAYPX(y, alpha, x ,ierr)
+       Vec y ! Vec
+       PetscScalar alpha ! PetscScalar
+       Vec x ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecWAXPY(w, alpha, x, y ,ierr)
+       Vec w ! Vec
+       PetscScalar alpha ! PetscScalar
+       Vec x ! Vec
+       Vec y ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecSetValues(x, ni, ix, y, iora ,ierr)
+       Vec x ! Vec
+       PetscInt ni ! PetscInt
+       PetscInt ix (*) ! PetscInt
+       PetscScalar y (*) ! PetscScalar
+       InsertMode iora ! InsertMode
+       integer ierr
+       end subroutine
+        subroutine VecGetValues(x, ni, ix, y ,ierr)
+       Vec x ! Vec
+       PetscInt ni ! PetscInt
+       PetscInt ix (*) ! PetscInt
+       PetscScalar y (*) ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecSetValuesBlocked(x, ni, ix, y, iora ,ierr)
+       Vec x ! Vec
+       PetscInt ni ! PetscInt
+       PetscInt ix (*) ! PetscInt
+       PetscScalar y (*) ! PetscScalar
+       InsertMode iora ! InsertMode
+       integer ierr
+       end subroutine
+        subroutine VecSetValuesLocal(x, ni, ix, y, iora ,ierr)
+       Vec x ! Vec
+       PetscInt ni ! PetscInt
+       PetscInt ix (*) ! PetscInt
+       PetscScalar y (*) ! PetscScalar
+       InsertMode iora ! InsertMode
+       integer ierr
+       end subroutine
+        subroutine VecSetValuesBlockedLocal(x, ni, ix, y, iora ,ierr)
+       Vec x ! Vec
+       PetscInt ni ! PetscInt
+       PetscInt ix (*) ! PetscInt
+       PetscScalar y (*) ! PetscScalar
+       InsertMode iora ! InsertMode
+       integer ierr
+       end subroutine
+        subroutine VecMTDot(x, nv, y, val ,ierr)
+       Vec x ! Vec
+       PetscInt nv ! PetscInt
+       Vec y (*) ! Vec
+       PetscScalar val (*) ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecMDot(x, nv, y, val ,ierr)
+       Vec x ! Vec
+       PetscInt nv ! PetscInt
+       Vec y (*) ! Vec
+       PetscScalar val (*) ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecMAXPY(y, nv, alpha, x ,ierr)
+       Vec y ! Vec
+       PetscInt nv ! PetscInt
+       PetscScalar alpha (*) ! PetscScalar
+       Vec x (*) ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecGetSubVector(X, is, Y ,ierr)
+       Vec X ! Vec
+       IS is ! IS
+       Vec Y ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecRestoreSubVector(X, is, Y ,ierr)
+       Vec X ! Vec
+       IS is ! IS
+       Vec Y ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecPlaceArray(vec, array ,ierr)
+       Vec vec ! Vec
+       PetscScalar array (*) ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecCreateNest(comm, nb, is, x, Y ,ierr)
+       integer comm ! MPI_Comm
+       PetscInt nb ! PetscInt
+       IS is (*) ! IS
+       Vec x (*) ! Vec
+       Vec Y ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecGetThreadOwnershipRange(X, thread_id, start, end ,&
+     &ierr)
+       Vec X ! Vec
+       PetscInt thread_id ! PetscInt
+       PetscInt start ! PetscInt
+       PetscInt end ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecSetNThreads(v, nthreads ,ierr)
+       Vec v ! Vec
+       PetscInt nthreads ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecGetNThreads(v, nthreads ,ierr)
+       Vec v ! Vec
+       PetscInt nthreads ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecSetThreadAffinities(v, affinities ,ierr)
+       Vec v ! Vec
+       PetscInt affinities (*) ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecCreateSeqPThread(comm, n, nthreads, affinities, v &
+     &,ierr)
+       integer comm ! MPI_Comm
+       PetscInt n ! PetscInt
+       PetscInt nthreads ! PetscInt
+       PetscInt affinities (*) ! PetscInt
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecStrideSet(v, start, s ,ierr)
+       Vec v ! Vec
+       PetscInt start ! PetscInt
+       PetscScalar s ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecStrideScale(v, start, scale ,ierr)
+       Vec v ! Vec
+       PetscInt start ! PetscInt
+       PetscScalar scale ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecStrideNorm(v, start, ntype, nrm ,ierr)
+       Vec v ! Vec
+       PetscInt start ! PetscInt
+       NormType ntype ! NormType
+       PetscReal nrm ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecStrideMax(v, start, idex, nrm ,ierr)
+       Vec v ! Vec
+       PetscInt start ! PetscInt
+       PetscInt idex ! PetscInt
+       PetscReal nrm ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecStrideMin(v, start, idex, nrm ,ierr)
+       Vec v ! Vec
+       PetscInt start ! PetscInt
+       PetscInt idex ! PetscInt
+       PetscReal nrm ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecStrideScaleAll(v, scales ,ierr)
+       Vec v ! Vec
+       PetscScalar scales ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecStrideNormAll(v, ntype, nrm ,ierr)
+       Vec v ! Vec
+       NormType ntype ! NormType
+       PetscReal nrm (*) ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecStrideMaxAll(v, idex, nrm ,ierr)
+       Vec v ! Vec
+       PetscInt idex (*) ! PetscInt
+       PetscReal nrm (*) ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecStrideMinAll(v, idex, nrm ,ierr)
+       Vec v ! Vec
+       PetscInt idex (*) ! PetscInt
+       PetscReal nrm (*) ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecStrideGatherAll(v, s, addv ,ierr)
+       Vec v ! Vec
+       Vec s (*) ! Vec
+       InsertMode addv ! InsertMode
+       integer ierr
+       end subroutine
+        subroutine VecStrideScatterAll(s, v, addv ,ierr)
+       Vec s (*) ! Vec
+       Vec v ! Vec
+       InsertMode addv ! InsertMode
+       integer ierr
+       end subroutine
+        subroutine VecStrideGather(v, start, s, addv ,ierr)
+       Vec v ! Vec
+       PetscInt start ! PetscInt
+       Vec s ! Vec
+       InsertMode addv ! InsertMode
+       integer ierr
+       end subroutine
+        subroutine VecStrideScatter(s, start, v, addv ,ierr)
+       Vec s ! Vec
+       PetscInt start ! PetscInt
+       Vec v ! Vec
+       InsertMode addv ! InsertMode
+       integer ierr
+       end subroutine
+        subroutine VecExp(v ,ierr)
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecLog(v ,ierr)
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecSqrtAbs(v ,ierr)
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecDotNorm2(s, t, dp, nm ,ierr)
+       Vec s ! Vec
+       Vec t ! Vec
+       PetscScalar dp ! PetscScalar
+       PetscScalar nm ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecSum(v, sum ,ierr)
+       Vec v ! Vec
+       PetscScalar sum ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecShift(v, shift ,ierr)
+       Vec v ! Vec
+       PetscScalar shift ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecAbs(v ,ierr)
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecPermute(x, row, inv ,ierr)
+       Vec x ! Vec
+       IS row ! IS
+       PetscBool inv ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine VecEqual(vec1, vec2, flg ,ierr)
+       Vec vec1 ! Vec
+       Vec vec2 ! Vec
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscCommSplitReductionBegin(comm ,ierr)
+       integer comm ! MPI_Comm
+       integer ierr
+       end subroutine
+        subroutine VecDotBegin(x, y, result ,ierr)
+       Vec x ! Vec
+       Vec y ! Vec
+       PetscScalar result ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecDotEnd(x, y, result ,ierr)
+       Vec x ! Vec
+       Vec y ! Vec
+       PetscScalar result ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecTDotBegin(x, y, result ,ierr)
+       Vec x ! Vec
+       Vec y ! Vec
+       PetscScalar result ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecTDotEnd(x, y, result ,ierr)
+       Vec x ! Vec
+       Vec y ! Vec
+       PetscScalar result ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecNormBegin(x, ntype, result ,ierr)
+       Vec x ! Vec
+       NormType ntype ! NormType
+       PetscReal result ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecNormEnd(x, ntype, result ,ierr)
+       Vec x ! Vec
+       NormType ntype ! NormType
+       PetscReal result ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecMDotBegin(x, nv, y, result ,ierr)
+       Vec x ! Vec
+       PetscInt nv ! PetscInt
+       Vec y (*) ! Vec
+       PetscScalar result (*) ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecMDotEnd(x, nv, y, result ,ierr)
+       Vec x ! Vec
+       PetscInt nv ! PetscInt
+       Vec y (*) ! Vec
+       PetscScalar result (*) ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecMTDotBegin(x, nv, y, result ,ierr)
+       Vec x ! Vec
+       PetscInt nv ! PetscInt
+       Vec y (*) ! Vec
+       PetscScalar result (*) ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecMTDotEnd(x, nv, y, result ,ierr)
+       Vec x ! Vec
+       PetscInt nv ! PetscInt
+       Vec y (*) ! Vec
+       PetscScalar result (*) ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine VecScatterGetMerged(ctx, flg ,ierr)
+       VecScatter ctx ! VecScatter
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine VecScatterBegin(inctx, x, y, addv, mode ,ierr)
+       VecScatter inctx ! VecScatter
+       Vec x ! Vec
+       Vec y ! Vec
+       InsertMode addv ! InsertMode
+       ScatterMode mode ! ScatterMode
+       integer ierr
+       end subroutine
+        subroutine VecScatterEnd(ctx, x, y, addv, mode ,ierr)
+       VecScatter ctx ! VecScatter
+       Vec x ! Vec
+       Vec y ! Vec
+       InsertMode addv ! InsertMode
+       ScatterMode mode ! ScatterMode
+       integer ierr
+       end subroutine
+        subroutine VecScatterCopy(sctx, ctx ,ierr)
+       VecScatter sctx ! VecScatter
+       VecScatter ctx ! VecScatter
+       integer ierr
+       end subroutine
+        subroutine VecScatterView(ctx, viewer ,ierr)
+       VecScatter ctx ! VecScatter
+       PetscViewer viewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine VecScatterCreateToAll(vin, ctx, vout ,ierr)
+       Vec vin ! Vec
+       VecScatter ctx ! VecScatter
+       Vec vout ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecScatterCreateToZero(vin, ctx, vout ,ierr)
+       Vec vin ! Vec
+       VecScatter ctx ! VecScatter
+       Vec vout ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecContourScale(v, vmin, vmax ,ierr)
+       Vec v ! Vec
+       PetscReal vmin ! PetscReal
+       PetscReal vmax ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine VecScatterCreateLocal(ctx, nsends, sendSizes,        &
+     &sendProcs, sendIdx, nrecvs, recvSizes, recvProcs, recvIdx, bs ,   &
+     &ierr)
+       VecScatter ctx ! VecScatter
+       PetscInt nsends ! PetscInt
+       PetscInt sendSizes (*) ! PetscInt
+       PetscInt sendProcs (*) ! PetscInt
+       PetscInt sendIdx (*) ! PetscInt
+       PetscInt nrecvs ! PetscInt
+       PetscInt recvSizes (*) ! PetscInt
+       PetscInt recvProcs (*) ! PetscInt
+       PetscInt recvIdx (*) ! PetscInt
+       PetscInt bs ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecGhostGetLocalForm(g, l ,ierr)
+       Vec g ! Vec
+       Vec l ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecGhostRestoreLocalForm(g, l ,ierr)
+       Vec g ! Vec
+       Vec l ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecGhostUpdateBegin(g, insertmode, scattermode ,ierr)
+       Vec g ! Vec
+       InsertMode insertmode ! InsertMode
+       ScatterMode scattermode ! ScatterMode
+       integer ierr
+       end subroutine
+        subroutine VecGhostUpdateEnd(g, insertmode, scattermode ,ierr)
+       Vec g ! Vec
+       InsertMode insertmode ! InsertMode
+       ScatterMode scattermode ! ScatterMode
+       integer ierr
+       end subroutine
+        subroutine VecCreateMPI(comm, n, nupper, v ,ierr)
+       integer comm ! MPI_Comm
+       PetscInt n ! PetscInt
+       PetscInt nupper ! PetscInt
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecCreateGhost(comm, n, nupper, nghost, ghosts, vv , &
+     &ierr)
+       integer comm ! MPI_Comm
+       PetscInt n ! PetscInt
+       PetscInt nupper ! PetscInt
+       PetscInt nghost ! PetscInt
+       PetscInt ghosts (*) ! PetscInt
+       Vec vv ! Vec
+       integer ierr
+       end subroutine
+        subroutine VecMPISetGhost(vv, nghost, ghosts ,ierr)
+       Vec vv ! Vec
+       PetscInt nghost ! PetscInt
+       PetscInt ghosts (*) ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine VecCreateGhostBlock(comm, bs, n, nupper, nghost,     &
+     &ghosts, vv ,ierr)
+       integer comm ! MPI_Comm
+       PetscInt bs ! PetscInt
+       PetscInt n ! PetscInt
+       PetscInt nupper ! PetscInt
+       PetscInt nghost ! PetscInt
+       PetscInt ghosts (*) ! PetscInt
+       Vec vv ! Vec
+       integer ierr
+       end subroutine

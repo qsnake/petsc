@@ -1,0 +1,133 @@
+        subroutine PetscViewerFlush(viewer ,ierr)
+       PetscViewer viewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerGetSingleton(viewer, outviewer ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscViewer outviewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerRestoreSingleton(viewer, outviewer ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscViewer outviewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerGetSubcomm(viewer, subcomm, outviewer ,   &
+     &ierr)
+       PetscViewer viewer ! PetscViewer
+       integer subcomm ! MPI_Comm
+       PetscViewer outviewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerRestoreSubcomm(viewer, subcomm, outviewer &
+     &,ierr)
+       PetscViewer viewer ! PetscViewer
+       integer subcomm ! MPI_Comm
+       PetscViewer outviewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerDestroy(viewer ,ierr)
+       PetscViewer viewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerSetUp(viewer ,ierr)
+       PetscViewer viewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerCreate(comm, inviewer ,ierr)
+       integer comm ! MPI_Comm
+       PetscViewer inviewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerBinarySkipInfo(viewer ,ierr)
+       PetscViewer viewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerBinarySetSkipOptions(viewer, skip ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscBool skip ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscViewerBinaryGetSkipOptions(viewer, skip ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscBool skip ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscViewerBinarySetSkipHeader(viewer, skip ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscBool skip ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscViewerBinaryGetSkipHeader(viewer, skip ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscBool skip ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscViewerBinarySetMPIIO(viewer ,ierr)
+       PetscViewer viewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerDrawClear(viewer ,ierr)
+       PetscViewer viewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerDrawGetPause(viewer, pause ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscReal pause ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscViewerDrawSetPause(viewer, pause ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscReal pause ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscViewerDrawSetHold(viewer, hold ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscBool hold ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscViewerDrawGetHold(viewer, hold ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscBool hold ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscViewerDrawSetBounds(viewer, nbounds, bounds ,   &
+     &ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscInt nbounds ! PetscInt
+       PetscReal bounds ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscViewerASCIISetTab(viewer, tabs ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscInt tabs ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine PetscViewerASCIIGetTab(viewer, tabs ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscInt tabs ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine PetscViewerASCIIAddTab(viewer, tabs ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscInt tabs ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine PetscViewerASCIISubtractTab(viewer, tabs ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscInt tabs ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine PetscViewerASCIIPushTab(viewer ,ierr)
+       PetscViewer viewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerASCIIPopTab(viewer ,ierr)
+       PetscViewer viewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PetscViewerASCIIUseTabs(viewer, flg ,ierr)
+       PetscViewer viewer ! PetscViewer
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine

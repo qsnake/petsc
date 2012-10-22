@@ -1,0 +1,15 @@
+        subroutine DMShellSetMatrix(dm, J ,ierr)
+       DM dm ! DM
+       Mat J ! Mat
+       integer ierr
+       end subroutine
+        subroutine DMShellSetGlobalVector(dm, X ,ierr)
+       DM dm ! DM
+       Vec X ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMShellCreate(comm, dm ,ierr)
+       integer comm ! MPI_Comm
+       DM dm ! DM
+       integer ierr
+       end subroutine

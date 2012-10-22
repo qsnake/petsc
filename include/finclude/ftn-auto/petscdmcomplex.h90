@@ -1,0 +1,79 @@
+        subroutine DMComplexCreateExodus(comm, exoid, dm ,ierr)
+       integer comm ! MPI_Comm
+       PetscInt exoid ! PetscInt
+       DM dm ! DM
+       integer ierr
+       end subroutine
+        subroutine DMComplexGetDimension(dm, dim ,ierr)
+       DM dm ! DM
+       PetscInt dim ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMComplexSetDimension(dm, dim ,ierr)
+       DM dm ! DM
+       PetscInt dim ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMComplexGetChart(dm, pStart, pEnd ,ierr)
+       DM dm ! DM
+       PetscInt pStart ! PetscInt
+       PetscInt pEnd ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMComplexSetChart(dm, pStart, pEnd ,ierr)
+       DM dm ! DM
+       PetscInt pStart ! PetscInt
+       PetscInt pEnd ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMComplexGetConeSize(dm, p, size ,ierr)
+       DM dm ! DM
+       PetscInt p ! PetscInt
+       PetscInt size ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMComplexSetConeSize(dm, p, size ,ierr)
+       DM dm ! DM
+       PetscInt p ! PetscInt
+       PetscInt size ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMComplexSetCone(dm, p, cone ,ierr)
+       DM dm ! DM
+       PetscInt p ! PetscInt
+       PetscInt cone (*) ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMComplexSetConeOrientation(dm, p, coneOrientation , &
+     &ierr)
+       DM dm ! DM
+       PetscInt p ! PetscInt
+       PetscInt coneOrientation (*) ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMComplexGetSupportSize(dm, p, size ,ierr)
+       DM dm ! DM
+       PetscInt p ! PetscInt
+       PetscInt size ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMComplexGetMaxSizes(dm, maxConeSize, maxSupportSize &
+     &,ierr)
+       DM dm ! DM
+       PetscInt maxConeSize ! PetscInt
+       PetscInt maxSupportSize ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMComplexSymmetrize(dm ,ierr)
+       DM dm ! DM
+       integer ierr
+       end subroutine
+        subroutine DMComplexStratify(dm ,ierr)
+       DM dm ! DM
+       integer ierr
+       end subroutine
+        subroutine DMComplexCreate(comm, mesh ,ierr)
+       integer comm ! MPI_Comm
+       DM mesh ! DM
+       integer ierr
+       end subroutine

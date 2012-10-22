@@ -1,0 +1,22 @@
+        subroutine PFApplyVec(pf, x, y ,ierr)
+       PF pf ! PF
+       Vec x ! Vec
+       Vec y ! Vec
+       integer ierr
+       end subroutine
+        subroutine PFApply(pf, n, x, y ,ierr)
+       PF pf ! PF
+       PetscInt n ! PetscInt
+       PetscScalar x ! PetscScalar
+       PetscScalar y ! PetscScalar
+       integer ierr
+       end subroutine
+        subroutine PFView(pf, viewer ,ierr)
+       PF pf ! PF
+       PetscViewer viewer ! PetscViewer
+       integer ierr
+       end subroutine
+        subroutine PFSetFromOptions(pf ,ierr)
+       PF pf ! PF
+       integer ierr
+       end subroutine

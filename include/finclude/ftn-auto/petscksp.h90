@@ -1,0 +1,537 @@
+        subroutine KSPRichardsonSetScale(ksp, scale ,ierr)
+       KSP ksp ! KSP
+       PetscReal scale ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPRichardsonSetSelfScale(ksp, scale ,ierr)
+       KSP ksp ! KSP
+       PetscBool scale ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine MatCreateSchurComplement(A00, Ap00, A01, A10, A11, N &
+     &,ierr)
+       Mat A00 ! Mat
+       Mat Ap00 ! Mat
+       Mat A01 ! Mat
+       Mat A10 ! Mat
+       Mat A11 ! Mat
+       Mat N ! Mat
+       integer ierr
+       end subroutine
+        subroutine MatSchurComplementGetKSP(A, ksp ,ierr)
+       Mat A ! Mat
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine MatSchurComplementUpdate(N, A, Ap, B, C, D, str ,ierr&
+     &)
+       Mat N ! Mat
+       Mat A ! Mat
+       Mat Ap ! Mat
+       Mat B ! Mat
+       Mat C ! Mat
+       Mat D ! Mat
+       MatStructure str ! MatStructure
+       integer ierr
+       end subroutine
+        subroutine MatGetSchurComplement(mat, isrow0, iscol0, isrow1,   &
+     &iscol1, mreuse, newmat, preuse, newpmat ,ierr)
+       Mat mat ! Mat
+       IS isrow0 ! IS
+       IS iscol0 ! IS
+       IS isrow1 ! IS
+       IS iscol1 ! IS
+       MatReuse mreuse ! MatReuse
+       Mat newmat ! Mat
+       MatReuse preuse ! MatReuse
+       Mat newpmat ! Mat
+       integer ierr
+       end subroutine
+        subroutine KSPGLTRSetRadius(ksp, radius ,ierr)
+       KSP ksp ! KSP
+       PetscReal radius ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPGLTRGetNormD(ksp, norm_d ,ierr)
+       KSP ksp ! KSP
+       PetscReal norm_d ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPGLTRGetObjFcn(ksp, o_fcn ,ierr)
+       KSP ksp ! KSP
+       PetscReal o_fcn ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPGLTRGetMinEig(ksp, e_min ,ierr)
+       KSP ksp ! KSP
+       PetscReal e_min ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPGLTRGetLambda(ksp, lambda ,ierr)
+       KSP ksp ! KSP
+       PetscReal lambda ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPNASHSetRadius(ksp, radius ,ierr)
+       KSP ksp ! KSP
+       PetscReal radius ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPNASHGetNormD(ksp, norm_d ,ierr)
+       KSP ksp ! KSP
+       PetscReal norm_d ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPNASHGetObjFcn(ksp, o_fcn ,ierr)
+       KSP ksp ! KSP
+       PetscReal o_fcn ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPSTCGSetRadius(ksp, radius ,ierr)
+       KSP ksp ! KSP
+       PetscReal radius ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPSTCGGetNormD(ksp, norm_d ,ierr)
+       KSP ksp ! KSP
+       PetscReal norm_d ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPSTCGGetObjFcn(ksp, o_fcn ,ierr)
+       KSP ksp ! KSP
+       PetscReal o_fcn ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPChebyshevSetEigenvalues(ksp, emax, emin ,ierr)
+       KSP ksp ! KSP
+       PetscReal emax ! PetscReal
+       PetscReal emin ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPChebyshevSetEstimateEigenvalues(ksp, a, b, c, d , &
+     &ierr)
+       KSP ksp ! KSP
+       PetscReal a ! PetscReal
+       PetscReal b ! PetscReal
+       PetscReal c ! PetscReal
+       PetscReal d ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPChebyshevSetNewMatrix(ksp ,ierr)
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine KSPQCGSetTrustRegionRadius(ksp, delta ,ierr)
+       KSP ksp ! KSP
+       PetscReal delta ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPQCGGetTrialStepNorm(ksp, tsnorm ,ierr)
+       KSP ksp ! KSP
+       PetscReal tsnorm ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPQCGGetQuadratic(ksp, quadratic ,ierr)
+       KSP ksp ! KSP
+       PetscReal quadratic ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPCGSetType(ksp, type ,ierr)
+       KSP ksp ! KSP
+       KSPCGType type ! KSPCGType
+       integer ierr
+       end subroutine
+        subroutine KSPCGUseSingleReduction(ksp, flg ,ierr)
+       KSP ksp ! KSP
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPGMRESSetCGSRefinementType(ksp, type ,ierr)
+       KSP ksp ! KSP
+       KSPGMRESCGSRefinementType type ! KSPGMRESCGSRefinementType
+       integer ierr
+       end subroutine
+        subroutine KSPGMRESGetCGSRefinementType(ksp, type ,ierr)
+       KSP ksp ! KSP
+       KSPGMRESCGSRefinementType type ! KSPGMRESCGSRefinementType
+       integer ierr
+       end subroutine
+        subroutine KSPGMRESSetRestart(ksp, restart ,ierr)
+       KSP ksp ! KSP
+       PetscInt restart ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine KSPGMRESGetRestart(ksp, restart ,ierr)
+       KSP ksp ! KSP
+       PetscInt restart ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine KSPGMRESSetHapTol(ksp, tol ,ierr)
+       KSP ksp ! KSP
+       PetscReal tol ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPGMRESSetPreAllocateVectors(ksp ,ierr)
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine KSPComputeExplicitOperator(ksp, mat ,ierr)
+       KSP ksp ! KSP
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine KSPComputeEigenvaluesExplicitly(ksp, nmax, r, c ,ierr&
+     &)
+       KSP ksp ! KSP
+       PetscInt nmax ! PetscInt
+       PetscReal r ! PetscReal
+       PetscReal c ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPInitialResidual(ksp, vsoln, vt1, vt2, vres, vb ,  &
+     &ierr)
+       KSP ksp ! KSP
+       Vec vsoln ! Vec
+       Vec vt1 ! Vec
+       Vec vt2 ! Vec
+       Vec vres ! Vec
+       Vec vb ! Vec
+       integer ierr
+       end subroutine
+        subroutine KSPUnwindPreconditioner(ksp, vsoln, vt1 ,ierr)
+       KSP ksp ! KSP
+       Vec vsoln ! Vec
+       Vec vt1 ! Vec
+       integer ierr
+       end subroutine
+        subroutine KSPMonitorLGDestroy(drawlg ,ierr)
+       PetscDrawLG drawlg ! PetscDrawLG
+       integer ierr
+       end subroutine
+        subroutine KSPMonitorLGRangeDestroy(drawlg ,ierr)
+       PetscDrawLG drawlg ! PetscDrawLG
+       integer ierr
+       end subroutine
+        subroutine KSPSetFromOptions(ksp ,ierr)
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine KSPGetResidualNorm(ksp, rnorm ,ierr)
+       KSP ksp ! KSP
+       PetscReal rnorm ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPGetIterationNumber(ksp, its ,ierr)
+       KSP ksp ! KSP
+       PetscInt its ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine KSPDefaultConvergedSetUIRNorm(ksp ,ierr)
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine KSPDefaultConvergedSetUMIRNorm(ksp ,ierr)
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine KSPGetConvergedReason(ksp, reason ,ierr)
+       KSP ksp ! KSP
+       KSPConvergedReason reason ! KSPConvergedReason
+       integer ierr
+       end subroutine
+        subroutine KSPSetDM(ksp, dm ,ierr)
+       KSP ksp ! KSP
+       DM dm ! DM
+       integer ierr
+       end subroutine
+        subroutine KSPSetDMActive(ksp, flg ,ierr)
+       KSP ksp ! KSP
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPGetDM(ksp, dm ,ierr)
+       KSP ksp ! KSP
+       DM dm ! DM
+       integer ierr
+       end subroutine
+        subroutine KSPSetApplicationContext(ksp, usrP ,ierr)
+       KSP ksp ! KSP
+       PetscVoid usrP ! void
+       integer ierr
+       end subroutine
+        subroutine KSPGetApplicationContext(ksp, usrP ,ierr)
+       KSP ksp ! KSP
+       PetscVoid usrP ! void
+       integer ierr
+       end subroutine
+        subroutine KSPComputeExtremeSingularValues(ksp, emax, emin ,ierr&
+     &)
+       KSP ksp ! KSP
+       PetscReal emax ! PetscReal
+       PetscReal emin ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPComputeEigenvalues(ksp, n, r, c, neig ,ierr)
+       KSP ksp ! KSP
+       PetscInt n ! PetscInt
+       PetscReal r ! PetscReal
+       PetscReal c ! PetscReal
+       PetscInt neig ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine KSPSetUpOnBlocks(ksp ,ierr)
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine KSPSetUp(ksp ,ierr)
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine KSPSolve(ksp, b, x ,ierr)
+       KSP ksp ! KSP
+       Vec b ! Vec
+       Vec x ! Vec
+       integer ierr
+       end subroutine
+        subroutine KSPSolveTranspose(ksp, b, x ,ierr)
+       KSP ksp ! KSP
+       Vec b ! Vec
+       Vec x ! Vec
+       integer ierr
+       end subroutine
+        subroutine KSPReset(ksp ,ierr)
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine KSPDestroy(ksp ,ierr)
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine KSPSetPCSide(ksp, side ,ierr)
+       KSP ksp ! KSP
+       PCSide side ! PCSide
+       integer ierr
+       end subroutine
+        subroutine KSPGetPCSide(ksp, side ,ierr)
+       KSP ksp ! KSP
+       PCSide side ! PCSide
+       integer ierr
+       end subroutine
+        subroutine KSPGetTolerances(ksp, rtol, abstol, dtol, maxits ,   &
+     &ierr)
+       KSP ksp ! KSP
+       PetscReal rtol ! PetscReal
+       PetscReal abstol ! PetscReal
+       PetscReal dtol ! PetscReal
+       PetscInt maxits ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine KSPSetTolerances(ksp, rtol, abstol, dtol, maxits ,   &
+     &ierr)
+       KSP ksp ! KSP
+       PetscReal rtol ! PetscReal
+       PetscReal abstol ! PetscReal
+       PetscReal dtol ! PetscReal
+       PetscInt maxits ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine KSPSetInitialGuessNonzero(ksp, flg ,ierr)
+       KSP ksp ! KSP
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPGetInitialGuessNonzero(ksp, flag ,ierr)
+       KSP ksp ! KSP
+       PetscBool flag ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPSetErrorIfNotConverged(ksp, flg ,ierr)
+       KSP ksp ! KSP
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPGetErrorIfNotConverged(ksp, flag ,ierr)
+       KSP ksp ! KSP
+       PetscBool flag ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPSetInitialGuessKnoll(ksp, flg ,ierr)
+       KSP ksp ! KSP
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPGetInitialGuessKnoll(ksp, flag ,ierr)
+       KSP ksp ! KSP
+       PetscBool flag ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPGetComputeSingularValues(ksp, flg ,ierr)
+       KSP ksp ! KSP
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPSetComputeSingularValues(ksp, flg ,ierr)
+       KSP ksp ! KSP
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPGetComputeEigenvalues(ksp, flg ,ierr)
+       KSP ksp ! KSP
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPSetComputeEigenvalues(ksp, flg ,ierr)
+       KSP ksp ! KSP
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPGetRhs(ksp, r ,ierr)
+       KSP ksp ! KSP
+       Vec r ! Vec
+       integer ierr
+       end subroutine
+        subroutine KSPGetSolution(ksp, v ,ierr)
+       KSP ksp ! KSP
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine KSPSetPC(ksp, pc ,ierr)
+       KSP ksp ! KSP
+       PC pc ! PC
+       integer ierr
+       end subroutine
+        subroutine KSPGetPC(ksp, pc ,ierr)
+       KSP ksp ! KSP
+       PC pc ! PC
+       integer ierr
+       end subroutine
+        subroutine KSPMonitor(ksp, it, rnorm ,ierr)
+       KSP ksp ! KSP
+       PetscInt it ! PetscInt
+       PetscReal rnorm ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPMonitorCancel(ksp ,ierr)
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine KSPSetResidualHistory(ksp, a, na, reset ,ierr)
+       KSP ksp ! KSP
+       PetscReal a (*) ! PetscReal
+       PetscInt na ! PetscInt
+       PetscBool reset ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPSetDiagonalScale(ksp, scale ,ierr)
+       KSP ksp ! KSP
+       PetscBool scale ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPGetDiagonalScale(ksp, scale ,ierr)
+       KSP ksp ! KSP
+       PetscBool scale ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPSetDiagonalScaleFix(ksp, fix ,ierr)
+       KSP ksp ! KSP
+       PetscBool fix ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPGetDiagonalScaleFix(ksp, fix ,ierr)
+       KSP ksp ! KSP
+       PetscBool fix ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPSetNormType(ksp, normtype ,ierr)
+       KSP ksp ! KSP
+       KSPNormType normtype ! KSPNormType
+       integer ierr
+       end subroutine
+        subroutine KSPSetCheckNormIteration(ksp, it ,ierr)
+       KSP ksp ! KSP
+       PetscInt it ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine KSPSetLagNorm(ksp, flg ,ierr)
+       KSP ksp ! KSP
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPSetSupportedNorm(ksp, normtype, pcside, priority ,&
+     &ierr)
+       KSP ksp ! KSP
+       KSPNormType normtype ! KSPNormType
+       PCSide pcside ! PCSide
+       PetscInt priority ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine KSPGetNormType(ksp, normtype ,ierr)
+       KSP ksp ! KSP
+       KSPNormType normtype ! KSPNormType
+       integer ierr
+       end subroutine
+        subroutine KSPSetOperators(ksp, Amat, Pmat, flag ,ierr)
+       KSP ksp ! KSP
+       Mat Amat ! Mat
+       Mat Pmat ! Mat
+       MatStructure flag ! MatStructure
+       integer ierr
+       end subroutine
+        subroutine KSPGetOperators(ksp, Amat, Pmat, flag ,ierr)
+       KSP ksp ! KSP
+       Mat Amat ! Mat
+       Mat Pmat ! Mat
+       MatStructure flag ! MatStructure
+       integer ierr
+       end subroutine
+        subroutine KSPCreate(comm, inksp ,ierr)
+       integer comm ! MPI_Comm
+       KSP inksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine KSPRegisterDestroy(ierr)
+       integer ierr
+       end subroutine
+        subroutine KSPSetNullSpace(ksp, nullsp ,ierr)
+       KSP ksp ! KSP
+       MatNullSpace nullsp ! MatNullSpace
+       integer ierr
+       end subroutine
+        subroutine KSPGetNullSpace(ksp, nullsp ,ierr)
+       KSP ksp ! KSP
+       MatNullSpace nullsp ! MatNullSpace
+       integer ierr
+       end subroutine
+        subroutine KSPFGMRESModifyPCNoChange(ksp, total_its, loc_its,   &
+     &res_norm, dummy ,ierr)
+       KSP ksp ! KSP
+       PetscInt total_its ! PetscInt
+       PetscInt loc_its ! PetscInt
+       PetscReal res_norm ! PetscReal
+       PetscVoid dummy ! void
+       integer ierr
+       end subroutine
+        subroutine KSPFGMRESModifyPCKSP(ksp, total_its, loc_its,        &
+     &res_norm, dummy ,ierr)
+       KSP ksp ! KSP
+       PetscInt total_its ! PetscInt
+       PetscInt loc_its ! PetscInt
+       PetscReal res_norm ! PetscReal
+       PetscVoid dummy ! void
+       integer ierr
+       end subroutine
+        subroutine KSPBCGSLSetXRes(ksp, delta ,ierr)
+       KSP ksp ! KSP
+       PetscReal delta ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine KSPBCGSLSetPol(ksp, uMROR ,ierr)
+       KSP ksp ! KSP
+       PetscBool uMROR ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine KSPBCGSLSetEll(ksp, ell ,ierr)
+       KSP ksp ! KSP
+       PetscInt ell ! PetscInt
+       integer ierr
+       end subroutine

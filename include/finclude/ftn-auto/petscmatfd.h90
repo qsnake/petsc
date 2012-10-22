@@ -1,0 +1,28 @@
+        subroutine MatFDColoringSetParameters(matfd, error, umin ,ierr)
+       MatFDColoring matfd ! MatFDColoring
+       PetscReal error ! PetscReal
+       PetscReal umin ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine MatFDColoringSetFromOptions(matfd ,ierr)
+       MatFDColoring matfd ! MatFDColoring
+       integer ierr
+       end subroutine
+        subroutine MatFDColoringCreate(mat, iscoloring, color ,ierr)
+       Mat mat ! Mat
+       ISColoring iscoloring ! ISColoring
+       MatFDColoring color ! MatFDColoring
+       integer ierr
+       end subroutine
+        subroutine MatFDColoringDestroy(c ,ierr)
+       MatFDColoring c ! MatFDColoring
+       integer ierr
+       end subroutine
+        subroutine MatFDColoringApply(J, coloring, x1, flag, sctx ,ierr)
+       Mat J ! Mat
+       MatFDColoring coloring ! MatFDColoring
+       Vec x1 ! Vec
+       MatStructure flag ! MatStructure
+       PetscVoid sctx ! void
+       integer ierr
+       end subroutine

@@ -1,0 +1,276 @@
+        subroutine DMDAComputeFunction(da, lf, vu, vfu, w ,ierr)
+       DM da ! DM
+       external lf ! void function pointer
+       Vec vu ! Vec
+       Vec vfu ! Vec
+       PetscVoid w ! void
+       integer ierr
+       end subroutine
+        subroutine DMDAComputeFunction1(da, vu, vfu, w ,ierr)
+       DM da ! DM
+       Vec vu ! Vec
+       Vec vfu ! Vec
+       PetscVoid w ! void
+       integer ierr
+       end subroutine
+        subroutine DMDAComputeFunctioni1(da, i, vu, vfu, w ,ierr)
+       DM da ! DM
+       PetscInt i ! PetscInt
+       Vec vu ! Vec
+       PetscScalar vfu ! PetscScalar
+       PetscVoid w ! void
+       integer ierr
+       end subroutine
+        subroutine DMDAComputeFunctionib1(da, i, vu, vfu, w ,ierr)
+       DM da ! DM
+       PetscInt i ! PetscInt
+       Vec vu ! Vec
+       PetscScalar vfu ! PetscScalar
+       PetscVoid w ! void
+       integer ierr
+       end subroutine
+        subroutine DMDAComputeJacobian1(da, vu, J, w ,ierr)
+       DM da ! DM
+       Vec vu ! Vec
+       Mat J ! Mat
+       PetscVoid w ! void
+       integer ierr
+       end subroutine
+        subroutine DMDALocalToLocalBegin(da, g, mode, l ,ierr)
+       DM da ! DM
+       Vec g ! Vec
+       InsertMode mode ! InsertMode
+       Vec l ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMDALocalToLocalEnd(da, g, mode, l ,ierr)
+       DM da ! DM
+       Vec g ! Vec
+       InsertMode mode ! InsertMode
+       Vec l ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMDAGlobalToNaturalAllCreate(da, scatter ,ierr)
+       DM da ! DM
+       VecScatter scatter ! VecScatter
+       integer ierr
+       end subroutine
+        subroutine DMDANaturalAllToGlobalCreate(da, scatter ,ierr)
+       DM da ! DM
+       VecScatter scatter ! VecScatter
+       integer ierr
+       end subroutine
+        subroutine DMDASetUniformCoordinates(da, xmin, xmax, ymin, ymax &
+     &, zmin, zmax ,ierr)
+       DM da ! DM
+       PetscReal xmin ! PetscReal
+       PetscReal xmax ! PetscReal
+       PetscReal ymin ! PetscReal
+       PetscReal ymax ! PetscReal
+       PetscReal zmin ! PetscReal
+       PetscReal zmax ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine DMDAVecRestoreArray(da, vec, array ,ierr)
+       DM da ! DM
+       Vec vec ! Vec
+       PetscVoid array ! void
+       integer ierr
+       end subroutine
+        subroutine DMDAVecRestoreArrayDOF(da, vec, array ,ierr)
+       DM da ! DM
+       Vec vec ! Vec
+       PetscVoid array ! void
+       integer ierr
+       end subroutine
+        subroutine DMDACreate(comm, da ,ierr)
+       integer comm ! MPI_Comm
+       DM da ! DM
+       integer ierr
+       end subroutine
+        subroutine DMDAGetAO(da, ao ,ierr)
+       DM da ! DM
+       AO ao ! AO
+       integer ierr
+       end subroutine
+        subroutine DMDASetDim(da, dim ,ierr)
+       DM da ! DM
+       PetscInt dim ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMDASetSizes(da, M, N, P ,ierr)
+       DM da ! DM
+       PetscInt M ! PetscInt
+       PetscInt N ! PetscInt
+       PetscInt P ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMDASetNumProcs(da, m, n, p ,ierr)
+       DM da ! DM
+       PetscInt m ! PetscInt
+       PetscInt n ! PetscInt
+       PetscInt p ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMDASetBoundaryType(da, bx, by, bz ,ierr)
+       DM da ! DM
+       DMDABoundaryType bx ! DMDABoundaryType
+       DMDABoundaryType by ! DMDABoundaryType
+       DMDABoundaryType bz ! DMDABoundaryType
+       integer ierr
+       end subroutine
+        subroutine DMDASetDof(da, dof ,ierr)
+       DM da ! DM
+       PetscInt dof ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMDASetStencilType(da, stype ,ierr)
+       DM da ! DM
+       DMDAStencilType stype ! DMDAStencilType
+       integer ierr
+       end subroutine
+        subroutine DMDASetStencilWidth(da, width ,ierr)
+       DM da ! DM
+       PetscInt width ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMDASetOwnershipRanges(da, lx, ly, lz ,ierr)
+       DM da ! DM
+       PetscInt lx (*) ! PetscInt
+       PetscInt ly (*) ! PetscInt
+       PetscInt lz (*) ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMDASetInterpolationType(da, ctype ,ierr)
+       DM da ! DM
+       DMDAInterpolationType ctype ! DMDAInterpolationType
+       integer ierr
+       end subroutine
+        subroutine DMDAGetInterpolationType(da, ctype ,ierr)
+       DM da ! DM
+       DMDAInterpolationType ctype ! DMDAInterpolationType
+       integer ierr
+       end subroutine
+        subroutine DMDASetRefinementFactor(da, refine_x, refine_y,      &
+     &refine_z ,ierr)
+       DM da ! DM
+       PetscInt refine_x ! PetscInt
+       PetscInt refine_y ! PetscInt
+       PetscInt refine_z ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMCreateInterpolationScale(dac, daf, mat, scale ,ierr&
+     &)
+       DM dac ! DM
+       DM daf ! DM
+       Mat mat ! Mat
+       Vec scale ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMDASetBlockFills(da, dfill, ofill ,ierr)
+       DM da ! DM
+       PetscInt dfill ! PetscInt
+       PetscInt ofill ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine MatSetDM(mat, da ,ierr)
+       Mat mat ! Mat
+       DM da ! DM
+       integer ierr
+       end subroutine
+        subroutine DMDASetCoordinates(da, c ,ierr)
+       DM da ! DM
+       Vec c ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMDASetGhostedCoordinates(da, c ,ierr)
+       DM da ! DM
+       Vec c ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMDAGetCoordinates(da, c ,ierr)
+       DM da ! DM
+       Vec c ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMDAGetCoordinateDA(da, cda ,ierr)
+       DM da ! DM
+       DM cda ! DM
+       integer ierr
+       end subroutine
+        subroutine DMDAGetGhostedCoordinates(da, c ,ierr)
+       DM da ! DM
+       Vec c ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMDAGetCorners(da, x, y, z, m, n, p ,ierr)
+       DM da ! DM
+       PetscInt x ! PetscInt
+       PetscInt y ! PetscInt
+       PetscInt z ! PetscInt
+       PetscInt m ! PetscInt
+       PetscInt n ! PetscInt
+       PetscInt p ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMDAGetLocalBoundingBox(da, lmin, lmax ,ierr)
+       DM da ! DM
+       PetscReal lmin (*) ! PetscReal
+       PetscReal lmax (*) ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine DMDAGetBoundingBox(da, gmin, gmax ,ierr)
+       DM da ! DM
+       PetscReal gmin (*) ! PetscReal
+       PetscReal gmax (*) ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine DMDAGetReducedDA(da, nfields, nda ,ierr)
+       DM da ! DM
+       PetscInt nfields ! PetscInt
+       DM nda ! DM
+       integer ierr
+       end subroutine
+        subroutine DMDAGetGhostCorners(da, x, y, z, m, n, p ,ierr)
+       DM da ! DM
+       PetscInt x ! PetscInt
+       PetscInt y ! PetscInt
+       PetscInt z ! PetscInt
+       PetscInt m ! PetscInt
+       PetscInt n ! PetscInt
+       PetscInt p ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMDACreateNaturalVector(da, g ,ierr)
+       DM da ! DM
+       Vec g ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMDAGlobalToNaturalBegin(da, g, mode, l ,ierr)
+       DM da ! DM
+       Vec g ! Vec
+       InsertMode mode ! InsertMode
+       Vec l ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMDAGlobalToNaturalEnd(da, g, mode, l ,ierr)
+       DM da ! DM
+       Vec g ! Vec
+       InsertMode mode ! InsertMode
+       Vec l ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMDANaturalToGlobalBegin(da, g, mode, l ,ierr)
+       DM da ! DM
+       Vec g ! Vec
+       InsertMode mode ! InsertMode
+       Vec l ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMDANaturalToGlobalEnd(da, g, mode, l ,ierr)
+       DM da ! DM
+       Vec g ! Vec
+       InsertMode mode ! InsertMode
+       Vec l ! Vec
+       integer ierr
+       end subroutine

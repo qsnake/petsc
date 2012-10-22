@@ -1,0 +1,65 @@
+        subroutine PetscInfoDeactivateClass(objclass ,ierr)
+       integer objclass ! int
+       integer ierr
+       end subroutine
+        subroutine PetscInfoActivateClass(objclass ,ierr)
+       integer objclass ! int
+       integer ierr
+       end subroutine
+        subroutine PetscLogTraceBegin(file ,ierr)
+       FILE file ! FILE
+       integer ierr
+       end subroutine
+        subroutine PetscLogActions(flag ,ierr)
+       PetscBool flag ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscLogObjects(flag ,ierr)
+       PetscBool flag ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscLogStageSetActive(stage, isActive ,ierr)
+       PetscLogStage stage ! PetscLogStage
+       PetscBool isActive ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscLogStageGetActive(stage, isActive ,ierr)
+       PetscLogStage stage ! PetscLogStage
+       PetscBool isActive ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscLogStageSetVisible(stage, isVisible ,ierr)
+       PetscLogStage stage ! PetscLogStage
+       PetscBool isVisible ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscLogStageGetVisible(stage, isVisible ,ierr)
+       PetscLogStage stage ! PetscLogStage
+       PetscBool isVisible ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscLogEventActivate(event ,ierr)
+       PetscLogEvent event ! PetscLogEvent
+       integer ierr
+       end subroutine
+        subroutine PetscLogEventDeactivate(event ,ierr)
+       PetscLogEvent event ! PetscLogEvent
+       integer ierr
+       end subroutine
+        subroutine PetscLogEventSetActiveAll(event, isActive ,ierr)
+       PetscLogEvent event ! PetscLogEvent
+       PetscBool isActive ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscLogEventActivateClass(classid ,ierr)
+       PetscClassId classid ! PetscClassId
+       integer ierr
+       end subroutine
+        subroutine PetscLogEventDeactivateClass(classid ,ierr)
+       PetscClassId classid ! PetscClassId
+       integer ierr
+       end subroutine
+        subroutine PetscLogViewPython(viewer ,ierr)
+       PetscViewer viewer ! PetscViewer
+       integer ierr
+       end subroutine

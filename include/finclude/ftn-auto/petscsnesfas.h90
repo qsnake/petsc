@@ -1,0 +1,177 @@
+        subroutine SNESFASGetGalerkin(snes, flg ,ierr)
+       SNES snes ! SNES
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine SNESFASSetGalerkin(snes, flg ,ierr)
+       SNES snes ! SNES
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine SNESFASCreateCoarseVec(snes, Xcoarse ,ierr)
+       SNES snes ! SNES
+       Vec Xcoarse ! Vec
+       integer ierr
+       end subroutine
+        subroutine SNESFASRestrict(fine, Xfine, Xcoarse ,ierr)
+       SNES fine ! SNES
+       Vec Xfine ! Vec
+       Vec Xcoarse ! Vec
+       integer ierr
+       end subroutine
+        subroutine SNESFASSetType(snes, fastype ,ierr)
+       SNES snes ! SNES
+       SNESFASType fastype ! SNESFASType
+       integer ierr
+       end subroutine
+        subroutine SNESFASGetType(snes, fastype ,ierr)
+       SNES snes ! SNES
+       SNESFASType fastype ! SNESFASType
+       integer ierr
+       end subroutine
+        subroutine SNESFASGetLevels(snes, levels ,ierr)
+       SNES snes ! SNES
+       PetscInt levels ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine SNESFASGetCycleSNES(snes, level, lsnes ,ierr)
+       SNES snes ! SNES
+       PetscInt level ! PetscInt
+       SNES lsnes ! SNES
+       integer ierr
+       end subroutine
+        subroutine SNESFASSetNumberSmoothUp(snes, n ,ierr)
+       SNES snes ! SNES
+       PetscInt n ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine SNESFASSetNumberSmoothDown(snes, n ,ierr)
+       SNES snes ! SNES
+       PetscInt n ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine SNESFASSetCycles(snes, cycles ,ierr)
+       SNES snes ! SNES
+       PetscInt cycles ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine SNESFASSetMonitor(snes, flg ,ierr)
+       SNES snes ! SNES
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine SNESFASCycleSetCycles(snes, cycles ,ierr)
+       SNES snes ! SNES
+       PetscInt cycles ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine SNESFASCycleGetSmoother(snes, smooth ,ierr)
+       SNES snes ! SNES
+       SNES smooth ! SNES
+       integer ierr
+       end subroutine
+        subroutine SNESFASCycleGetSmootherUp(snes, smoothu ,ierr)
+       SNES snes ! SNES
+       SNES smoothu ! SNES
+       integer ierr
+       end subroutine
+        subroutine SNESFASCycleGetSmootherDown(snes, smoothd ,ierr)
+       SNES snes ! SNES
+       SNES smoothd ! SNES
+       integer ierr
+       end subroutine
+        subroutine SNESFASCycleGetCorrection(snes, correction ,ierr)
+       SNES snes ! SNES
+       SNES correction ! SNES
+       integer ierr
+       end subroutine
+        subroutine SNESFASCycleGetInterpolation(snes, mat ,ierr)
+       SNES snes ! SNES
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine SNESFASCycleGetRestriction(snes, mat ,ierr)
+       SNES snes ! SNES
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine SNESFASCycleGetInjection(snes, mat ,ierr)
+       SNES snes ! SNES
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine SNESFASCycleGetRScale(snes, vec ,ierr)
+       SNES snes ! SNES
+       Vec vec ! Vec
+       integer ierr
+       end subroutine
+        subroutine SNESFASCycleIsFine(snes, flg ,ierr)
+       SNES snes ! SNES
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine SNESFASSetInterpolation(snes, level, mat ,ierr)
+       SNES snes ! SNES
+       PetscInt level ! PetscInt
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine SNESFASGetInterpolation(snes, level, mat ,ierr)
+       SNES snes ! SNES
+       PetscInt level ! PetscInt
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine SNESFASSetRestriction(snes, level, mat ,ierr)
+       SNES snes ! SNES
+       PetscInt level ! PetscInt
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine SNESFASGetRestriction(snes, level, mat ,ierr)
+       SNES snes ! SNES
+       PetscInt level ! PetscInt
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine SNESFASSetInjection(snes, level, mat ,ierr)
+       SNES snes ! SNES
+       PetscInt level ! PetscInt
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine SNESFASGetInjection(snes, level, mat ,ierr)
+       SNES snes ! SNES
+       PetscInt level ! PetscInt
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine SNESFASSetRScale(snes, level, rscale ,ierr)
+       SNES snes ! SNES
+       PetscInt level ! PetscInt
+       Vec rscale ! Vec
+       integer ierr
+       end subroutine
+        subroutine SNESFASGetSmoother(snes, level, smooth ,ierr)
+       SNES snes ! SNES
+       PetscInt level ! PetscInt
+       SNES smooth ! SNES
+       integer ierr
+       end subroutine
+        subroutine SNESFASGetSmootherDown(snes, level, smooth ,ierr)
+       SNES snes ! SNES
+       PetscInt level ! PetscInt
+       SNES smooth ! SNES
+       integer ierr
+       end subroutine
+        subroutine SNESFASGetSmootherUp(snes, level, smooth ,ierr)
+       SNES snes ! SNES
+       PetscInt level ! PetscInt
+       SNES smooth ! SNES
+       integer ierr
+       end subroutine
+        subroutine SNESFASGetCoarseSolve(snes, smooth ,ierr)
+       SNES snes ! SNES
+       SNES smooth ! SNES
+       integer ierr
+       end subroutine

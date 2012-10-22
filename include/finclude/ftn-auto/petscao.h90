@@ -1,0 +1,56 @@
+        subroutine AOPetscToApplicationIS(ao, is ,ierr)
+       AO ao ! AO
+       IS is ! IS
+       integer ierr
+       end subroutine
+        subroutine AOApplicationToPetscIS(ao, is ,ierr)
+       AO ao ! AO
+       IS is ! IS
+       integer ierr
+       end subroutine
+        subroutine AOPetscToApplication(ao, n, ia ,ierr)
+       AO ao ! AO
+       PetscInt n ! PetscInt
+       PetscInt ia (*) ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine AOApplicationToPetsc(ao, n, ia ,ierr)
+       AO ao ! AO
+       PetscInt n ! PetscInt
+       PetscInt ia (*) ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine AOPetscToApplicationPermuteInt(ao, block, array ,ierr&
+     &)
+       AO ao ! AO
+       PetscInt block ! PetscInt
+       PetscInt array (*) ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine AOApplicationToPetscPermuteInt(ao, block, array ,ierr&
+     &)
+       AO ao ! AO
+       PetscInt block ! PetscInt
+       PetscInt array (*) ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine AOPetscToApplicationPermuteReal(ao, block, array ,   &
+     &ierr)
+       AO ao ! AO
+       PetscInt block ! PetscInt
+       PetscReal array (*) ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine AOApplicationToPetscPermuteReal(ao, block, array ,   &
+     &ierr)
+       AO ao ! AO
+       PetscInt block ! PetscInt
+       PetscReal array (*) ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine AOMappingHasPetscIndex(ao, idex, hasIndex ,ierr)
+       AO ao ! AO
+       PetscInt idex ! PetscInt
+       PetscBool hasIndex ! PetscBool
+       integer ierr
+       end subroutine

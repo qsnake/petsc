@@ -1,0 +1,459 @@
+        subroutine TSAlphaSetRadius(ts, radius ,ierr)
+       TS ts ! TS
+       PetscReal radius ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSAlphaSetParams(ts, alpha_m, alpha_f, gamma ,ierr)
+       TS ts ! TS
+       PetscReal alpha_m ! PetscReal
+       PetscReal alpha_f ! PetscReal
+       PetscReal gamma ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSAlphaGetParams(ts, alpha_m, alpha_f, gamma ,ierr)
+       TS ts ! TS
+       PetscReal alpha_m ! PetscReal
+       PetscReal alpha_f ! PetscReal
+       PetscReal gamma ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSRKSetTolerance(ts, aabs ,ierr)
+       TS ts ! TS
+       PetscReal aabs ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSSetFromOptions(ts ,ierr)
+       TS ts ! TS
+       integer ierr
+       end subroutine
+        subroutine TSComputeRHSJacobian(ts, t, X, A, B, flg ,ierr)
+       TS ts ! TS
+       PetscReal t ! PetscReal
+       Vec X ! Vec
+       Mat A ! Mat
+       Mat B ! Mat
+       MatStructure flg ! MatStructure
+       integer ierr
+       end subroutine
+        subroutine TSComputeRHSFunction(ts, t, x, y ,ierr)
+       TS ts ! TS
+       PetscReal t ! PetscReal
+       Vec x ! Vec
+       Vec y ! Vec
+       integer ierr
+       end subroutine
+        subroutine TSComputeIFunction(ts, t, X, Xdot, Y, imex ,ierr)
+       TS ts ! TS
+       PetscReal t ! PetscReal
+       Vec X ! Vec
+       Vec Xdot ! Vec
+       Vec Y ! Vec
+       PetscBool imex ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine TSComputeIJacobian(ts, t, X, Xdot, shift, A, B, flg, &
+     &imex ,ierr)
+       TS ts ! TS
+       PetscReal t ! PetscReal
+       Vec X ! Vec
+       Vec Xdot ! Vec
+       PetscReal shift ! PetscReal
+       Mat A ! Mat
+       Mat B ! Mat
+       MatStructure flg ! MatStructure
+       PetscBool imex ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine TSSetApplicationContext(ts, usrP ,ierr)
+       TS ts ! TS
+       PetscVoid usrP ! void
+       integer ierr
+       end subroutine
+        subroutine TSGetApplicationContext(ts, usrP ,ierr)
+       TS ts ! TS
+       PetscVoid usrP ! void
+       integer ierr
+       end subroutine
+        subroutine TSGetTimeStepNumber(ts, iter ,ierr)
+       TS ts ! TS
+       PetscInt iter ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine TSSetInitialTimeStep(ts, initial_time, time_step ,   &
+     &ierr)
+       TS ts ! TS
+       PetscReal initial_time ! PetscReal
+       PetscReal time_step ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSSetTimeStep(ts, time_step ,ierr)
+       TS ts ! TS
+       PetscReal time_step ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSSetExactFinalTime(ts, flg ,ierr)
+       TS ts ! TS
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine TSGetTimeStep(ts, dt ,ierr)
+       TS ts ! TS
+       PetscReal dt ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSGetSolution(ts, v ,ierr)
+       TS ts ! TS
+       Vec v ! Vec
+       integer ierr
+       end subroutine
+        subroutine TSSetProblemType(ts, type ,ierr)
+       TS ts ! TS
+       TSProblemType type ! TSProblemType
+       integer ierr
+       end subroutine
+        subroutine TSSetUp(ts ,ierr)
+       TS ts ! TS
+       integer ierr
+       end subroutine
+        subroutine TSReset(ts ,ierr)
+       TS ts ! TS
+       integer ierr
+       end subroutine
+        subroutine TSDestroy(ts ,ierr)
+       TS ts ! TS
+       integer ierr
+       end subroutine
+        subroutine TSGetSNES(ts, snes ,ierr)
+       TS ts ! TS
+       SNES snes ! SNES
+       integer ierr
+       end subroutine
+        subroutine TSGetKSP(ts, ksp ,ierr)
+       TS ts ! TS
+       KSP ksp ! KSP
+       integer ierr
+       end subroutine
+        subroutine TSGetDuration(ts, maxsteps, maxtime ,ierr)
+       TS ts ! TS
+       PetscInt maxsteps ! PetscInt
+       PetscReal maxtime ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSSetDuration(ts, maxsteps, maxtime ,ierr)
+       TS ts ! TS
+       PetscInt maxsteps ! PetscInt
+       PetscReal maxtime ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSSetSolution(ts, x ,ierr)
+       TS ts ! TS
+       Vec x ! Vec
+       integer ierr
+       end subroutine
+        subroutine TSPreStep(ts ,ierr)
+       TS ts ! TS
+       integer ierr
+       end subroutine
+        subroutine TSPreStage(ts, stagetime ,ierr)
+       TS ts ! TS
+       PetscReal stagetime ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSPostStep(ts ,ierr)
+       TS ts ! TS
+       integer ierr
+       end subroutine
+        subroutine TSMonitorDefault(ts, step, ptime, v, dummy ,ierr)
+       TS ts ! TS
+       PetscInt step ! PetscInt
+       PetscReal ptime ! PetscReal
+       Vec v ! Vec
+       PetscVoid dummy ! void
+       integer ierr
+       end subroutine
+        subroutine TSSetRetainStages(ts, flg ,ierr)
+       TS ts ! TS
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine TSInterpolate(ts, t, X ,ierr)
+       TS ts ! TS
+       PetscReal t ! PetscReal
+       Vec X ! Vec
+       integer ierr
+       end subroutine
+        subroutine TSStep(ts ,ierr)
+       TS ts ! TS
+       integer ierr
+       end subroutine
+        subroutine TSEvaluateStep(ts, order, X, done ,ierr)
+       TS ts ! TS
+       PetscInt order ! PetscInt
+       Vec X ! Vec
+       PetscBool done ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine TSSolve(ts, x, ftime ,ierr)
+       TS ts ! TS
+       Vec x ! Vec
+       PetscReal ftime ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSMonitor(ts, step, ptime, x ,ierr)
+       TS ts ! TS
+       PetscInt step ! PetscInt
+       PetscReal ptime ! PetscReal
+       Vec x ! Vec
+       integer ierr
+       end subroutine
+        subroutine TSGetTime(ts, t ,ierr)
+       TS ts ! TS
+       PetscReal t ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSSetTime(ts, t ,ierr)
+       TS ts ! TS
+       PetscReal t ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSSetDM(ts, dm ,ierr)
+       TS ts ! TS
+       DM dm ! DM
+       integer ierr
+       end subroutine
+        subroutine TSGetDM(ts, dm ,ierr)
+       TS ts ! TS
+       DM dm ! DM
+       integer ierr
+       end subroutine
+        subroutine SNESTSFormFunction(snes, X, F, ctx ,ierr)
+       SNES snes ! SNES
+       Vec X ! Vec
+       Vec F ! Vec
+       PetscVoid ctx ! void
+       integer ierr
+       end subroutine
+        subroutine SNESTSFormJacobian(snes, X, A, B, flag, ctx ,ierr)
+       SNES snes ! SNES
+       Vec X ! Vec
+       Mat A ! Mat
+       Mat B ! Mat
+       MatStructure flag ! MatStructure
+       PetscVoid ctx ! void
+       integer ierr
+       end subroutine
+        subroutine TSGetConvergedReason(ts, reason ,ierr)
+       TS ts ! TS
+       TSConvergedReason reason ! TSConvergedReason
+       integer ierr
+       end subroutine
+        subroutine TSGetSNESIterations(ts, nits ,ierr)
+       TS ts ! TS
+       PetscInt nits ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine TSGetKSPIterations(ts, lits ,ierr)
+       TS ts ! TS
+       PetscInt lits ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine TSGetStepRejections(ts, rejects ,ierr)
+       TS ts ! TS
+       PetscInt rejects ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine TSGetSNESFailures(ts, fails ,ierr)
+       TS ts ! TS
+       PetscInt fails ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine TSSetMaxStepRejections(ts, rejects ,ierr)
+       TS ts ! TS
+       PetscInt rejects ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine TSSetMaxSNESFailures(ts, fails ,ierr)
+       TS ts ! TS
+       PetscInt fails ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine TSSetErrorIfStepFails(ts, err ,ierr)
+       TS ts ! TS
+       PetscBool err ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine TSGetAdapt(ts, adapt ,ierr)
+       TS ts ! TS
+       TSAdapt adapt ! TSAdapt
+       integer ierr
+       end subroutine
+        subroutine TSSetTolerances(ts, atol, vatol, rtol, vrtol ,ierr)
+       TS ts ! TS
+       PetscReal atol ! PetscReal
+       Vec vatol ! Vec
+       PetscReal rtol ! PetscReal
+       Vec vrtol ! Vec
+       integer ierr
+       end subroutine
+        subroutine TSGetTolerances(ts, atol, vatol, rtol, vrtol ,ierr)
+       TS ts ! TS
+       PetscReal atol ! PetscReal
+       Vec vatol ! Vec
+       PetscReal rtol ! PetscReal
+       Vec vrtol ! Vec
+       integer ierr
+       end subroutine
+        subroutine TSErrorNormWRMS(ts, Y, norm ,ierr)
+       TS ts ! TS
+       Vec Y ! Vec
+       PetscReal norm ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSSetCFLTimeLocal(ts, cfltime ,ierr)
+       TS ts ! TS
+       PetscReal cfltime ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSGetCFLTime(ts, cfltime ,ierr)
+       TS ts ! TS
+       PetscReal cfltime ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSVISetVariableBounds(ts, xl, xu ,ierr)
+       TS ts ! TS
+       Vec xl ! Vec
+       Vec xu ! Vec
+       integer ierr
+       end subroutine
+        subroutine TSSSPSetNumStages(ts, nstages ,ierr)
+       TS ts ! TS
+       PetscInt nstages ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine TSSSPGetNumStages(ts, nstages ,ierr)
+       TS ts ! TS
+       PetscInt nstages ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine TSThetaGetTheta(ts, theta ,ierr)
+       TS ts ! TS
+       PetscReal theta ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSThetaSetTheta(ts, theta ,ierr)
+       TS ts ! TS
+       PetscReal theta ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSThetaGetEndpoint(ts, endpoint ,ierr)
+       TS ts ! TS
+       PetscBool endpoint ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine TSThetaSetEndpoint(ts, flg ,ierr)
+       TS ts ! TS
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine TSPseudoComputeTimeStep(ts, dt ,ierr)
+       TS ts ! TS
+       PetscReal dt ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSPseudoVerifyTimeStep(ts, update, dt, flag ,ierr)
+       TS ts ! TS
+       Vec update ! Vec
+       PetscReal dt ! PetscReal
+       PetscBool flag ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine TSPseudoSetTimeStepIncrement(ts, inc ,ierr)
+       TS ts ! TS
+       PetscReal inc ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSPseudoSetMaxTimeStep(ts, maxdt ,ierr)
+       TS ts ! TS
+       PetscReal maxdt ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSPseudoIncrementDtFromInitialDt(ts ,ierr)
+       TS ts ! TS
+       integer ierr
+       end subroutine
+        subroutine TSAdaptSetMonitor(adapt, flg ,ierr)
+       TSAdapt adapt ! TSAdapt
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine TSAdaptSetStepLimits(adapt, hmin, hmax ,ierr)
+       TSAdapt adapt ! TSAdapt
+       PetscReal hmin ! PetscReal
+       PetscReal hmax ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSAdaptSetFromOptions(adapt ,ierr)
+       TSAdapt adapt ! TSAdapt
+       integer ierr
+       end subroutine
+        subroutine TSAdaptCandidatesClear(adapt ,ierr)
+       TSAdapt adapt ! TSAdapt
+       integer ierr
+       end subroutine
+        subroutine TSAdaptCheckStage(adapt, ts, accept ,ierr)
+       TSAdapt adapt ! TSAdapt
+       TS ts ! TS
+       PetscBool accept ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine TSAdaptCreate(comm, inadapt ,ierr)
+       integer comm ! MPI_Comm
+       TSAdapt inadapt ! TSAdapt
+       integer ierr
+       end subroutine
+        subroutine TSSundialsSetType(ts, type ,ierr)
+       TS ts ! TS
+       TSSundialsLmmType type ! TSSundialsLmmType
+       integer ierr
+       end subroutine
+        subroutine TSSundialsSetMaxl(ts, maxl ,ierr)
+       TS ts ! TS
+       PetscInt maxl ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine TSSundialsSetLinearTolerance(ts, tol ,ierr)
+       TS ts ! TS
+       double precision tol ! double
+       integer ierr
+       end subroutine
+        subroutine TSSundialsSetGramSchmidtType(ts, type ,ierr)
+       TS ts ! TS
+       TSSundialsGramSchmidtType type ! TSSundialsGramSchmidtType
+       integer ierr
+       end subroutine
+        subroutine TSSundialsSetTolerance(ts, aabs, rel ,ierr)
+       TS ts ! TS
+       double precision aabs ! double
+       double precision rel ! double
+       integer ierr
+       end subroutine
+        subroutine TSSundialsGetPC(ts, pc ,ierr)
+       TS ts ! TS
+       PC pc ! PC
+       integer ierr
+       end subroutine
+        subroutine TSSundialsSetMinTimeStep(ts, mindt ,ierr)
+       TS ts ! TS
+       PetscReal mindt ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSSundialsSetMaxTimeStep(ts, maxdt ,ierr)
+       TS ts ! TS
+       PetscReal maxdt ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine TSSundialsMonitorInternalSteps(ts, ft ,ierr)
+       TS ts ! TS
+       PetscBool ft ! PetscBool
+       integer ierr
+       end subroutine

@@ -1,0 +1,4 @@
+        subroutine PetscGetNCores(ncores ,ierr)
+       PetscInt ncores ! PetscInt
+       integer ierr
+       end subroutine

@@ -1,0 +1,5 @@
+        subroutine DMCompositeGetEntriesArray(dm, dms ,ierr)
+       DM dm ! DM
+       DM dms (*) ! DM
+       integer ierr
+       end subroutine

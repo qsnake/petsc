@@ -1,0 +1,25 @@
+        subroutine DMADDAGetMatrixNS(dm, dmc, mtype, mat ,ierr)
+       DM dm ! DM
+       DM dmc ! DM
+       MatType mtype ! MatType
+       Mat mat ! Mat
+       integer ierr
+       end subroutine
+        subroutine DMADDASetRefinement(dm, refine, dofrefine ,ierr)
+       DM dm ! DM
+       PetscInt refine ! PetscInt
+       PetscInt dofrefine ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMADDAGetCorners(dm, lcorner, ucorner ,ierr)
+       DM dm ! DM
+       PetscInt lcorner ! PetscInt
+       PetscInt ucorner ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMADDAGetGhostCorners(dm, lcorner, ucorner ,ierr)
+       DM dm ! DM
+       PetscInt lcorner ! PetscInt
+       PetscInt ucorner ! PetscInt
+       integer ierr
+       end subroutine

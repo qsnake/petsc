@@ -1,0 +1,403 @@
+        subroutine PetscDrawPointSetSize(draw, width ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal width ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawPause(draw ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawGetCoordinates(draw, xl, yl, xr, yr ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal xl ! PetscReal
+       PetscReal yl ! PetscReal
+       PetscReal xr ! PetscReal
+       PetscReal yr ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSynchronizedFlush(draw ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLineSetWidth(draw, width ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal width ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawPoint(draw, xl, yl, cl ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal xl ! PetscReal
+       PetscReal yl ! PetscReal
+       integer cl ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawTriangle(draw, x1, y_1, x2, y2, x3, y3, c1, &
+     &c2, c3 ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal x1 ! PetscReal
+       PetscReal y_1 ! PetscReal
+       PetscReal x2 ! PetscReal
+       PetscReal y2 ! PetscReal
+       PetscReal x3 ! PetscReal
+       PetscReal y3 ! PetscReal
+       integer c1 ! int
+       integer c2 ! int
+       integer c3 ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawScalePopup(popup, min, max ,ierr)
+       PetscDraw popup ! PetscDraw
+       PetscReal min ! PetscReal
+       PetscReal max ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawTensorContourPatch(draw, m, n, x, y, max,   &
+     &min, v ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer m ! int
+       integer n ! int
+       PetscReal x ! PetscReal
+       PetscReal y ! PetscReal
+       PetscReal max ! PetscReal
+       PetscReal min ! PetscReal
+       PetscReal v ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSetPause(draw, lpause ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal lpause ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSynchronizedClear(draw ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawEllipse(draw, x, y, a, b, c ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal x ! PetscReal
+       PetscReal y ! PetscReal
+       PetscReal a ! PetscReal
+       PetscReal b ! PetscReal
+       integer c ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawStringSetSize(draw, width, height ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal width ! PetscReal
+       PetscReal height ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawClear(draw ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawBOP(draw ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawEOP(draw ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawGetMouseButton(draw, button, x_user, y_user &
+     &, x_phys, y_phys ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscDrawButton button ! PetscDrawButton
+       PetscReal x_user ! PetscReal
+       PetscReal y_user ! PetscReal
+       PetscReal x_phys ! PetscReal
+       PetscReal y_phys ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSynchronizedGetMouseButton(draw, button,    &
+     &x_user, y_user, x_phys, y_phys ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscDrawButton button ! PetscDrawButton
+       PetscReal x_user ! PetscReal
+       PetscReal y_user ! PetscReal
+       PetscReal x_phys ! PetscReal
+       PetscReal y_phys ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawResizeWindow(draw, w, h ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer w ! int
+       integer h ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawCheckResizedWindow(draw ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawDestroy(draw ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawGetPopup(draw, popup ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscDraw popup ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSetDisplay(draw, display ,ierr)
+       PetscDraw draw ! PetscDraw
+       character display ! char
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSetViewPort(draw, xl, yl, xr, yr ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal xl ! PetscReal
+       PetscReal yl ! PetscReal
+       PetscReal xr ! PetscReal
+       PetscReal yr ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSplitViewPort(draw ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawGetPause(draw, lpause ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal lpause ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLine(draw, xl, yl, xr, yr, cl ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal xl ! PetscReal
+       PetscReal yl ! PetscReal
+       PetscReal xr ! PetscReal
+       PetscReal yr ! PetscReal
+       integer cl ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawArrow(draw, xl, yl, xr, yr, cl ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal xl ! PetscReal
+       PetscReal yl ! PetscReal
+       PetscReal xr ! PetscReal
+       PetscReal yr ! PetscReal
+       integer cl ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawStringGetSize(draw, width, height ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal width ! PetscReal
+       PetscReal height ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawRectangle(draw, xl, yl, xr, yr, c1, c2, c3, &
+     &c4 ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal xl ! PetscReal
+       PetscReal yl ! PetscReal
+       PetscReal xr ! PetscReal
+       PetscReal yr ! PetscReal
+       integer c1 ! int
+       integer c2 ! int
+       integer c3 ! int
+       integer c4 ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSave(draw ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawIsNull(draw, yes ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscBool yes ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSetDoubleBuffer(draw ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSetCoordinates(draw, xl, yl, xr, yr ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal xl ! PetscReal
+       PetscReal yl ! PetscReal
+       PetscReal xr ! PetscReal
+       PetscReal yr ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawFlush(draw ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLineGetWidth(draw, width ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscReal width ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawHGSetNumberBins(hist, bins ,ierr)
+       PetscDrawHG hist ! PetscDrawHG
+       integer bins ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawHGReset(hist ,ierr)
+       PetscDrawHG hist ! PetscDrawHG
+       integer ierr
+       end subroutine
+        subroutine PetscDrawHGAddValue(hist, value ,ierr)
+       PetscDrawHG hist ! PetscDrawHG
+       PetscReal value ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawHGDraw(hist ,ierr)
+       PetscDrawHG hist ! PetscDrawHG
+       integer ierr
+       end subroutine
+        subroutine PetscDrawHGPrint(hist ,ierr)
+       PetscDrawHG hist ! PetscDrawHG
+       integer ierr
+       end subroutine
+        subroutine PetscDrawHGSetColor(hist, color ,ierr)
+       PetscDrawHG hist ! PetscDrawHG
+       integer color ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawHGSetLimits(hist, x_min, x_max, y_min, y_max&
+     & ,ierr)
+       PetscDrawHG hist ! PetscDrawHG
+       PetscReal x_min ! PetscReal
+       PetscReal x_max ! PetscReal
+       integer y_min ! int
+       integer y_max ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawHGCalcStats(hist, calc ,ierr)
+       PetscDrawHG hist ! PetscDrawHG
+       PetscBool calc ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscDrawHGIntegerBins(hist, ints ,ierr)
+       PetscDrawHG hist ! PetscDrawHG
+       PetscBool ints ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGAddPoint(lg, x, y ,ierr)
+       PetscDrawLG lg ! PetscDrawLG
+       PetscReal x ! PetscReal
+       PetscReal y ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGSetLimits(lg, x_min, x_max, y_min, y_max ,&
+     &ierr)
+       PetscDrawLG lg ! PetscDrawLG
+       PetscReal x_min ! PetscReal
+       PetscReal x_max ! PetscReal
+       PetscReal y_min ! PetscReal
+       PetscReal y_max ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawAxisCreate(draw, axis ,ierr)
+       PetscDraw draw ! PetscDraw
+       PetscDrawAxis axis ! PetscDrawAxis
+       integer ierr
+       end subroutine
+        subroutine PetscDrawAxisDestroy(axis ,ierr)
+       PetscDrawAxis axis ! PetscDrawAxis
+       integer ierr
+       end subroutine
+        subroutine PetscDrawAxisSetColors(axis, ac, tc, cc ,ierr)
+       PetscDrawAxis axis ! PetscDrawAxis
+       integer ac ! int
+       integer tc ! int
+       integer cc ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawAxisSetHoldLimits(axis, hold ,ierr)
+       PetscDrawAxis axis ! PetscDrawAxis
+       PetscBool hold ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PetscDrawAxisDraw(axis ,ierr)
+       PetscDrawAxis axis ! PetscDrawAxis
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSPSetDimension(sp, dim ,ierr)
+       PetscDrawSP sp ! PetscDrawSP
+       integer dim ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSPReset(sp ,ierr)
+       PetscDrawSP sp ! PetscDrawSP
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSPAddPoint(sp, x, y ,ierr)
+       PetscDrawSP sp ! PetscDrawSP
+       PetscReal x ! PetscReal
+       PetscReal y ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSPDraw(sp ,ierr)
+       PetscDrawSP sp ! PetscDrawSP
+       integer ierr
+       end subroutine
+        subroutine PetscDrawSPSetLimits(sp, x_min, x_max, y_min, y_max ,&
+     &ierr)
+       PetscDrawSP sp ! PetscDrawSP
+       PetscReal x_min ! PetscReal
+       PetscReal x_max ! PetscReal
+       PetscReal y_min ! PetscReal
+       PetscReal y_max ! PetscReal
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGGetAxis(lg, axis ,ierr)
+       PetscDrawLG lg ! PetscDrawLG
+       PetscDrawAxis axis ! PetscDrawAxis
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGGetDraw(lg, draw ,ierr)
+       PetscDrawLG lg ! PetscDrawLG
+       PetscDraw draw ! PetscDraw
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGSPDraw(lg, spin ,ierr)
+       PetscDrawLG lg ! PetscDrawLG
+       PetscDrawSP spin ! PetscDrawSP
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGCreate(draw, dim, outctx ,ierr)
+       PetscDraw draw ! PetscDraw
+       integer dim ! int
+       PetscDrawLG outctx ! PetscDrawLG
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGSetColors(lg, colors ,ierr)
+       PetscDrawLG lg ! PetscDrawLG
+       integer colors ! int
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGSetDimension(lg, dim ,ierr)
+       PetscDrawLG lg ! PetscDrawLG
+       PetscInt dim ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGReset(lg ,ierr)
+       PetscDrawLG lg ! PetscDrawLG
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGDestroy(lg ,ierr)
+       PetscDrawLG lg ! PetscDrawLG
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGIndicateDataPoints(lg ,ierr)
+       PetscDrawLG lg ! PetscDrawLG
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGDraw(lg ,ierr)
+       PetscDrawLG lg ! PetscDrawLG
+       integer ierr
+       end subroutine
+        subroutine PetscDrawLGPrint(lg ,ierr)
+       PetscDrawLG lg ! PetscDrawLG
+       integer ierr
+       end subroutine
+        subroutine PetscDrawAxisSetLimits(axis, xmin, xmax, ymin, ymax ,&
+     &ierr)
+       PetscDrawAxis axis ! PetscDrawAxis
+       PetscReal xmin ! PetscReal
+       PetscReal xmax ! PetscReal
+       PetscReal ymin ! PetscReal
+       PetscReal ymax ! PetscReal
+       integer ierr
+       end subroutine

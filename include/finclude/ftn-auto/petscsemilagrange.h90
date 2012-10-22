@@ -1,0 +1,4 @@
+        subroutine CharacteristicSetUp(c ,ierr)
+       Characteristic c ! Characteristic
+       integer ierr
+       end subroutine

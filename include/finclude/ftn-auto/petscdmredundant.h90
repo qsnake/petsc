@@ -1,0 +1,12 @@
+        subroutine DMRedundantSetSize(dm, rank, N ,ierr)
+       DM dm ! DM
+       PetscInt rank ! PetscInt
+       PetscInt N ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMRedundantGetSize(dm, rank, N ,ierr)
+       DM dm ! DM
+       PetscInt rank ! PetscInt
+       PetscInt N ! PetscInt
+       integer ierr
+       end subroutine

@@ -1,0 +1,253 @@
+        subroutine DMGetLocalVector(dm, g ,ierr)
+       DM dm ! DM
+       Vec g ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMRestoreLocalVector(dm, g ,ierr)
+       DM dm ! DM
+       Vec g ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMGetGlobalVector(dm, g ,ierr)
+       DM dm ! DM
+       Vec g ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMClearGlobalVectors(dm ,ierr)
+       DM dm ! DM
+       integer ierr
+       end subroutine
+        subroutine DMRestoreGlobalVector(dm, g ,ierr)
+       DM dm ! DM
+       Vec g ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMCreate(comm, dm ,ierr)
+       integer comm ! MPI_Comm
+       DM dm ! DM
+       integer ierr
+       end subroutine
+        subroutine DMDestroy(dm ,ierr)
+       DM dm ! DM
+       integer ierr
+       end subroutine
+        subroutine DMSetUp(dm ,ierr)
+       DM dm ! DM
+       integer ierr
+       end subroutine
+        subroutine DMSetFromOptions(dm ,ierr)
+       DM dm ! DM
+       integer ierr
+       end subroutine
+        subroutine DMCreateGlobalVector(dm, vec ,ierr)
+       DM dm ! DM
+       Vec vec ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMCreateLocalVector(dm, vec ,ierr)
+       DM dm ! DM
+       Vec vec ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMGetLocalToGlobalMapping(dm, ltog ,ierr)
+       DM dm ! DM
+       ISLocalToGlobalMapping ltog ! ISLocalToGlobalMapping
+       integer ierr
+       end subroutine
+        subroutine DMGetLocalToGlobalMappingBlock(dm, ltog ,ierr)
+       DM dm ! DM
+       ISLocalToGlobalMapping ltog ! ISLocalToGlobalMapping
+       integer ierr
+       end subroutine
+        subroutine DMGetBlockSize(dm, bs ,ierr)
+       DM dm ! DM
+       PetscInt bs ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMCreateInterpolation(dm1, dm2, mat, vec ,ierr)
+       DM dm1 ! DM
+       DM dm2 ! DM
+       Mat mat ! Mat
+       Vec vec ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMCreateInjection(dm1, dm2, ctx ,ierr)
+       DM dm1 ! DM
+       DM dm2 ! DM
+       VecScatter ctx ! VecScatter
+       integer ierr
+       end subroutine
+        subroutine DMSetMatrixPreallocateOnly(dm, only ,ierr)
+       DM dm ! DM
+       PetscBool only ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine DMRefine(dm, comm, dmf ,ierr)
+       DM dm ! DM
+       integer comm ! MPI_Comm
+       DM dmf ! DM
+       integer ierr
+       end subroutine
+        subroutine DMRefineHookAdd(coarse, refinehook, interphook, ctx ,&
+     &ierr)
+       DM coarse ! DM
+       external refinehook ! void function pointer
+       external interphook ! void function pointer
+       PetscVoid ctx ! void
+       integer ierr
+       end subroutine
+        subroutine DMInterpolate(coarse, interp, fine ,ierr)
+       DM coarse ! DM
+       Mat interp ! Mat
+       DM fine ! DM
+       integer ierr
+       end subroutine
+        subroutine DMGetRefineLevel(dm, level ,ierr)
+       DM dm ! DM
+       PetscInt level ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMGlobalToLocalBegin(dm, g, mode, l ,ierr)
+       DM dm ! DM
+       Vec g ! Vec
+       InsertMode mode ! InsertMode
+       Vec l ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMGlobalToLocalEnd(dm, g, mode, l ,ierr)
+       DM dm ! DM
+       Vec g ! Vec
+       InsertMode mode ! InsertMode
+       Vec l ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMLocalToGlobalBegin(dm, l, mode, g ,ierr)
+       DM dm ! DM
+       Vec l ! Vec
+       InsertMode mode ! InsertMode
+       Vec g ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMLocalToGlobalEnd(dm, l, mode, g ,ierr)
+       DM dm ! DM
+       Vec l ! Vec
+       InsertMode mode ! InsertMode
+       Vec g ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMComputeJacobianDefault(dm, x, A, B, stflag ,ierr)
+       DM dm ! DM
+       Vec x ! Vec
+       Mat A ! Mat
+       Mat B ! Mat
+       MatStructure stflag ! MatStructure
+       integer ierr
+       end subroutine
+        subroutine DMCoarsen(dm, comm, dmc ,ierr)
+       DM dm ! DM
+       integer comm ! MPI_Comm
+       DM dmc ! DM
+       integer ierr
+       end subroutine
+        subroutine DMCoarsenHookAdd(fine, coarsenhook, restricthook, ctx&
+     & ,ierr)
+       DM fine ! DM
+       external coarsenhook ! void function pointer
+       external restricthook ! void function pointer
+       PetscVoid ctx ! void
+       integer ierr
+       end subroutine
+        subroutine DMRestrict(fine, restrct, rscale, inject, coarse ,   &
+     &ierr)
+       DM fine ! DM
+       Mat restrct ! Mat
+       Vec rscale ! Vec
+       Mat inject ! Mat
+       DM coarse ! DM
+       integer ierr
+       end subroutine
+        subroutine DMGetCoarsenLevel(dm, level ,ierr)
+       DM dm ! DM
+       PetscInt level ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine DMCreateAggregates(dmc, dmf, rest ,ierr)
+       DM dmc ! DM
+       DM dmf ! DM
+       Mat rest ! Mat
+       integer ierr
+       end subroutine
+        subroutine DMSetApplicationContext(dm, ctx ,ierr)
+       DM dm ! DM
+       PetscVoid ctx ! void
+       integer ierr
+       end subroutine
+        subroutine DMGetApplicationContext(dm, ctx ,ierr)
+       DM dm ! DM
+       PetscVoid ctx ! void
+       integer ierr
+       end subroutine
+        subroutine DMHasVariableBounds(dm, flg ,ierr)
+       DM dm ! DM
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine DMComputeInitialGuess(dm, x ,ierr)
+       DM dm ! DM
+       Vec x ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMHasInitialGuess(dm, flg ,ierr)
+       DM dm ! DM
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine DMHasFunction(dm, flg ,ierr)
+       DM dm ! DM
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine DMHasJacobian(dm, flg ,ierr)
+       DM dm ! DM
+       PetscBool flg ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine DMComputeFunction(dm, x, b ,ierr)
+       DM dm ! DM
+       Vec x ! Vec
+       Vec b ! Vec
+       integer ierr
+       end subroutine
+        subroutine DMComputeJacobian(dm, x, A, B, stflag ,ierr)
+       DM dm ! DM
+       Vec x ! Vec
+       Mat A ! Mat
+       Mat B ! Mat
+       MatStructure stflag ! MatStructure
+       integer ierr
+       end subroutine
+        subroutine DMGetDefaultSection(dm, section ,ierr)
+       DM dm ! DM
+       PetscSection section ! PetscSection
+       integer ierr
+       end subroutine
+        subroutine DMSetDefaultSection(dm, section ,ierr)
+       DM dm ! DM
+       PetscSection section ! PetscSection
+       integer ierr
+       end subroutine
+        subroutine DMGetDefaultGlobalSection(dm, section ,ierr)
+       DM dm ! DM
+       PetscSection section ! PetscSection
+       integer ierr
+       end subroutine
+        subroutine DMGetDefaultSF(dm, sf ,ierr)
+       DM dm ! DM
+       PetscSF sf ! PetscSF
+       integer ierr
+       end subroutine
+        subroutine DMSetDefaultSF(dm, sf ,ierr)
+       DM dm ! DM
+       PetscSF sf ! PetscSF
+       integer ierr
+       end subroutine

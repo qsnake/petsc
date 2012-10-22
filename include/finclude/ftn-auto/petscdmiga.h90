@@ -1,0 +1,11 @@
+        subroutine DMIGAVecRestoreArray(dm, vec, array ,ierr)
+       DM dm ! DM
+       Vec vec ! Vec
+       PetscVoid array ! void
+       integer ierr
+       end subroutine
+        subroutine DMIGACreate(comm, iga ,ierr)
+       integer comm ! MPI_Comm
+       DM iga ! DM
+       integer ierr
+       end subroutine

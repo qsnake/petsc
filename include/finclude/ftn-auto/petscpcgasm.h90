@@ -1,0 +1,29 @@
+        subroutine PCGASMSetOverlap(pc, ovl ,ierr)
+       PC pc ! PC
+       PetscInt ovl ! PetscInt
+       integer ierr
+       end subroutine
+        subroutine PCGASMSetType(pc, type ,ierr)
+       PC pc ! PC
+       PCGASMType type ! PCGASMType
+       integer ierr
+       end subroutine
+        subroutine PCGASMSetSortIndices(pc, doSort ,ierr)
+       PC pc ! PC
+       PetscBool doSort ! PetscBool
+       integer ierr
+       end subroutine
+        subroutine PCGASMCreateSubdomains2D(pc, M, N, Mdomains, Ndomains&
+     &, dof, overlap, nsub, iis, ois ,ierr)
+       PC pc ! PC
+       PetscInt M ! PetscInt
+       PetscInt N ! PetscInt
+       PetscInt Mdomains ! PetscInt
+       PetscInt Ndomains ! PetscInt
+       PetscInt dof ! PetscInt
+       PetscInt overlap ! PetscInt
+       PetscInt nsub ! PetscInt
+       IS iis ! IS
+       IS ois ! IS
+       integer ierr
+       end subroutine
